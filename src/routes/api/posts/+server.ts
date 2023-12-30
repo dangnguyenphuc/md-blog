@@ -12,20 +12,28 @@ async function getPosts(){
     for (const path in paths)
     {
         // get SLUG by getting file name
-        const slug = path.split('/').at(-1)?.replace(".md",'');
-        
+        const slug = path.split('/').at(-1)?.replace('.md','');
         // get file
         const file = paths[path];
-        
-        // get metadata from file 
-        const metadata = file.metadata;
+        if(
+            slug &&                 // slug exists
+            file &&                 // file exists
+            typeof file === 'object' &&     // file is an obj
+            'metadata' in file      // file has metadata field
+        ){
+            // get metadata from file 
+            const metadata = file.metadata as Omit<Post, 'slug'>;
 
-        // merge metadata and slug
-        const post: Post = {...metadata, slug};
+            // merge metadata and slug
+            const post = { ...metadata, slug } satisfies Post;
 
-        post.published && posts.push(post);
-
+            post.published && posts.push(post);
+        }
     }
+
+    // sort posts 
+    posts = posts.sort(
+        (a, b) => new Date(b.date).getTime() - new Date(a.date).getTime())
 
     return posts
 }

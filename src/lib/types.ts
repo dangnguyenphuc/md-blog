@@ -1,10 +1,10 @@
-export type Categories = 'sveltekit' | 'svelte'
+export type Categories = 'sveltekit' | 'svelte' | 'other'
 
 export type Post = {
-    title: String,
-    slug: String,
-    description: String
-    date: String
+    title: string,
+    slug: string,
+    description: string
+    date: string
     categories: Categories[]
     published: boolean
 }
