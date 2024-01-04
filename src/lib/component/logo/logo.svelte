@@ -29,8 +29,6 @@
 
 <canvas
     bind:this={canvas}
-	width={8}
-	height={8}
 />
 
 <style>

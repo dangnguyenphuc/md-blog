@@ -1,7 +1,6 @@
-<script lang="ts">
-    import {img} from '$lib/component/custom/index'
-    export {img}
+<script lang="ts" context="module">
+    import { img } from '$lib/component/custom'
+    export { img }
 </script>
-
 
 <slot/>

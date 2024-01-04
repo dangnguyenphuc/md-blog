@@ -7,6 +7,15 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
 		%sveltekit.head%
 	</head>
+
+	<script type="module">
+		const theme = localStorage.getItem("color-scheme");
+
+		theme
+			? document.documentElement.setAttribute("color-scheme", theme)
+			: localStorage.setItem("color-scheme", "dark")
+	</script>
+
 	<body data-sveltekit-preload-data="hover">
 		<div style="display: contents">%sveltekit.body%</div>
 	</body>

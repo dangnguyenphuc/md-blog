@@ -12,6 +12,8 @@ published: true
   import Logo from "$lib/component/logo/logo.svelte" 
 </script>
 
+## Table of Contents
+
 ## Svelte
 
 Media inside the **static** folder is served from `/`.
