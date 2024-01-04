@@ -33,7 +33,7 @@
 
 <style>
 	article {
-		max-inline-size: var(--size-content-3);
+		max-inline-size: 70ch;
 		margin-inline: auto;
 	}
 

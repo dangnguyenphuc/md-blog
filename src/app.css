@@ -140,6 +140,7 @@ li {
 
 .prose p:not(:is(h2, h3, h4, h5, h6) + p) {
 	margin-top: var(--size-7);
+	margin-bottom: var(--size-3);
 }
 
 .prose :is(ul, ol) {

@@ -1,33 +1,4 @@
----
-title: Second
-description: Second post
-date: '2023-12-31'
-categories:
-  - sveltekit
-  - svelte
-published: true
----
-
-<script lang="ts">
-  import Logo from "$lib/component/logo/logo.svelte" 
-</script>
-
-## Svelte
-
-Media inside the **static** folder is served from `/`.
-
-![Svelte](favicon.png)
-
-
-Not impressed yet ?? 🤡🤡🤡
-## See this Logo below
-<Logo />
-
-This logo can be render by the ```paint()``` function below:
-
-
-```ts
-export function paint(context, t) {
+export function paint(context: { canvas: { width: any; height: any; }; getImageData: (arg0: number, arg1: number, arg2: any, arg3: any) => any; putImageData: (arg0: any, arg1: number, arg2: number) => void; }, t: number) {
 	const { width, height } = context.canvas;
 	const imageData = context.getImageData(0, 0, width, height);
 
@@ -48,7 +19,3 @@ export function paint(context, t) {
 
 	context.putImageData(imageData, 0, 0);
 }
-```
-
-## End🌸
-This is a nice post btw! 
