@@ -5,7 +5,7 @@ async function getPosts(){
     let posts: Post[] = []
     
     const paths = import.meta.glob('/src/posts/*.md',{
-        eager: true
+        eager: true    // enable 2 read files
     })
 
     // console.log(path)
