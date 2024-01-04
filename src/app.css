@@ -154,6 +154,7 @@ li {
 }
 
 .prose pre {
+	overflow-x: scroll;
 	max-inline-size: 100%;
 	padding: 1rem;
 	border-radius: 8px;
