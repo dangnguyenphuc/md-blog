@@ -6,5 +6,5 @@ published: true
 ---
 
 # MARKDOWN BLOG BY SVELTE
-![Svelte](static/favicon.png)
+![Svelte](static/logo/svelte.png)
 

@@ -1,11 +1,11 @@
 <script>
     import Toggle from './toggle.svelte'
-    import * as config from '$lib/config';
+    import MainLogo from '$lib/component/logo/main-logo.svelte';
 </script>
 
 <nav>
     <a href="/" class="title">
-        <b>{config.title}</b>
+        <MainLogo />
     </a>
     <ul class="links">
         <li>

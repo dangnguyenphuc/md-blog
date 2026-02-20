@@ -13,8 +13,8 @@
         if(context)
 		{
             let frame = requestAnimationFrame(function loop(t) {
-			frame = requestAnimationFrame(loop);
-			paint(context, t);
+				frame = requestAnimationFrame(loop);
+				paint(context, t);
 		    });
 
             return () => {
@@ -33,12 +33,7 @@
 
 <style>
 	canvas {
-		width: 100%;
-		height: 100%;
 		background-color: #666;
-		mask: url(./svelte-logo-mask.svg) 50% 50% no-repeat;
-		mask-size: 30vmin;
-		-webkit-mask: url(./svelte-logo-mask.svg) 50% 50% no-repeat;
-		-webkit-mask-size: 30vmin;
+		mask: url(logo/svelte-logo-mask.svg) 50% 50% no-repeat;
 	}
 </style>

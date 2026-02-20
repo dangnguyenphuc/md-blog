@@ -1,9 +1,9 @@
 <script>
-    import * as config from '$lib/config';
+    import {author_name, published_year} from '$lib/config';
 </script>
 
 <footer>
-    <p>{config.title} &copy {new Date().getFullYear()}</p>
+    <p>By <b>{author_name}</b> &copy  {published_year}-{new Date().getFullYear()}</p>
 </footer>
 
 <style>

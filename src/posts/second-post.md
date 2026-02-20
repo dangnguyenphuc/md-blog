@@ -9,7 +9,7 @@ published: true
 ---
 
 <script lang="ts">
-  import Logo from "$lib/component/logo/logo.svelte" 
+  import SvelteLogo from "$lib/component/logo/svelte-logo.svelte" 
 </script>
 
 ## Table of Contents
@@ -18,12 +18,17 @@ published: true
 
 Media inside the **static** folder is served from `/`.
 
-![Svelte](favicon.png)
+
+![Svelte](logo/svelte.png)
 
 
 Not impressed yet ?? 🤡🤡🤡
 ## See this Logo below
-<Logo />
+
+<div class="tmp">
+<SvelteLogo />
+</div>
+
 
 This logo can be render by the ```paint()``` function below:
 
@@ -54,3 +59,9 @@ export function paint(context, t) {
 
 ## End🌸
 This is a nice post btw! 
+
+
+<style>
+	.tmp {
+	}
+</style>
